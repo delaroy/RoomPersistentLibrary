@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?colorAccent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_margin"
+            tools:context=".EmployeeEditor">
+
+            <!-- Overview category -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Label -->
+                <TextView
+                    android:text="@string/employee_name"
+                    style="@style/CategoryStyle" />
+
+                <!-- Input fields -->
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:paddingLeft="4dp"
+                    android:orientation="vertical">
+
+                    <!-- Name field -->
+                    <EditText
+                        android:id="@+id/edit_employee_firstname"
+                        android:hint="@string/hint_employee_firstname"
+                        android:inputType="textCapWords"
+                        style="@style/EditorFieldStyle" />
+
+                    <!-- Breed field -->
+                    <EditText
+                        android:id="@+id/edit_employee_lastname"
+                        android:hint="@string/hint_employee_lastname"
+                        android:inputType="textCapWords"
+                        style="@style/EditorFieldStyle" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Title category -->
+            <LinearLayout
+                android:id="@+id/employeeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/category_title"
+                    style="@style/CategoryStyle" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:paddingLeft="4dp"
+                    android:orientation="vertical">
+
+                    <!-- Name field -->
+                    <EditText
+                        android:id="@+id/edit_employee_title"
+                        android:hint="@string/hint_employee_title"
+                        android:inputType="textCapWords"
+                        style="@style/EditorFieldStyle" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- Department category -->
+            <LinearLayout
+                android:id="@+id/employeeDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/category_department"
+                    style="@style/CategoryStyle" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:paddingLeft="4dp"
+                    android:orientation="vertical">
+
+                    <!-- Name field -->
+                    <EditText
+                        android:id="@+id/edit_employee_department"
+                        android:hint="@string/hint_employee_department"
+                        android:inputType="textCapWords"
+                        style="@style/EditorFieldStyle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/button_save"
+                android:textColor="@color/buttonLabel" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>
